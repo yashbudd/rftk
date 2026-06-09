@@ -902,14 +902,15 @@ body {
 
 .contact-link {
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--gt-navy);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.85rem;
   border: 1.5px solid var(--gray-200);
   border-radius: 8px;
   transition: all var(--transition);
+  word-break: break-all;
 }
 
 .contact-link:hover {
