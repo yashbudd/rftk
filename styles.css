@@ -299,6 +299,15 @@ body {
   color: var(--gt-navy);
 }
 
+.partner-link {
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.partner-link:hover {
+  color: var(--choa-red);
+}
+
 .partner-divider {
   width: 1px;
   height: 16px;
@@ -514,6 +523,17 @@ body {
 
 .story-card-accent strong {
   color: var(--gt-gold-light);
+}
+
+.story-card-accent a {
+  color: var(--gt-gold-light);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.story-card-accent a:hover {
+  color: var(--white);
 }
 
 .story-label {
@@ -910,6 +930,87 @@ body {
   color: var(--choa-red);
 }
 
+/* Resources */
+.resources {
+  background: var(--gray-100);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.resource-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.resource-card-link:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gt-gold);
+}
+
+.resource-card-soon {
+  border-style: dashed;
+  border-color: var(--gray-400);
+  background: var(--off-white);
+}
+
+.resource-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gt-gold);
+  margin-bottom: 0.75rem;
+}
+
+.resource-card-soon .resource-tag {
+  color: var(--gray-400);
+}
+
+.resource-card h3 {
+  font-size: 1.1rem;
+  color: var(--gt-navy);
+  margin-bottom: 0.5rem;
+}
+
+.resource-card p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.resource-action {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gt-navy);
+}
+
+.resource-card-link:hover .resource-action {
+  color: var(--choa-red);
+}
+
+.resource-action-disabled {
+  color: var(--gray-400);
+  cursor: default;
+}
+
 /* Sponsor */
 .sponsor {
   background: var(--gray-100);
@@ -1185,7 +1286,7 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
   gap: 2rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1267,6 +1368,10 @@ body {
   }
 
   .news-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-grid {
     grid-template-columns: 1fr;
   }
 
