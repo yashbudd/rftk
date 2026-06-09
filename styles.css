@@ -500,6 +500,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.85rem;
+  align-items: center;
 }
 
 .about-gallery-grid img {
